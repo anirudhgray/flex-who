@@ -6,8 +6,7 @@
 
 body,
 p,
-img,
-ul {
+img {
     margin: 0;
     align-self: center;
 }
@@ -16,6 +15,7 @@ body {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.25rem;
+    font-weight: 700;
     background-color: white;
     line-height: 1.5;
     min-height: 100vh;
@@ -28,10 +28,18 @@ img {
 
 ul {
     padding:0;
+    color: rgb(172, 172, 172);
     list-style: none;
 }
 
 /* MAIN */
+
+li:hover {
+    color: black;
+}
+.gall-img:hover {
+    opacity: 0.3;
+}
 
 .container {
     padding-inline: 2em;
@@ -74,6 +82,16 @@ ul {
 .gall-img {
     height: 250px;
     border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+.img-container {
+    position: relative;
+}
+.img-title {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
 }
 
 .footer {
@@ -108,5 +126,8 @@ ul {
     }
     .rev {
         flex-direction: column-reverse;
+    }
+    .regenline {
+        display: none;
     }
 }
